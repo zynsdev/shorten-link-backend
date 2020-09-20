@@ -1,10 +1,12 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const mongoose = require('mongoose')
 
 // Use middleware
 app.use(express.json())
+app.use(cors())
 
 // Routes
 app.get('/', (req, res) => res.json({msg: "Server is OK"}))
