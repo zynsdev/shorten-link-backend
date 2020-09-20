@@ -17,4 +17,4 @@ db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('connected to database'))
 
 //Start     
-app.listen(3000, () => console.log('server started'))
+app.listen(process.env.PORT || 3000, () => console.log('server started'))
